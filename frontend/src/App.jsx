@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     function fun() {
-      fetch("http://localhost:3000/").then(async (res) => {
+      fetch("https://planify-fullstack.onrender.com/").then(async (res) => {
         const json = await res.json();
         setTasks(json.allTasks);
       });
@@ -23,7 +23,7 @@ function App() {
 
 
   async function updateStatus(taskId){
-    const response = await fetch("http://localhost:3000/update",{
+    const response = await fetch("https://planify-fullstack.onrender.com/update",{
       method: "PUT",
       body: JSON.stringify({id : taskId}),
       headers: {

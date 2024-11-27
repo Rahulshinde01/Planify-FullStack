@@ -5,7 +5,7 @@ export function CreateTasks({renderFun}) {
   const [description, setDescription] = useState("");
 
   async function addingData() {
-    const response = await fetch("http://localhost:3000/add", {
+    const response = await fetch("https://planify-fullstack.onrender.com/add", {
       method: "POST",
       body: JSON.stringify({
         tasks: task,
