@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require('dotenv').config();
 
-mongoose.connect(process.env.url)
+mongoose.connect(process.env.MONGODB_URL)
 
 const megaSchema = new mongoose.Schema({
     tasks : String,
